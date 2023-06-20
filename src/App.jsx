@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={'flex h-24 bg-sky-900 py-8 px-32 justify-between'}> 
+        <h1 className={'text-xl font-bold text-white  cursor-pointer'}>Logo</h1>
+        <ul className="flex space-x-6">
+            <li className="text-sm font-bold text-white cursor-pointer">
+                Home
+            </li>
+            <li className="text-sm font-bold text-white cursor-pointer">
+                Contact
+            </li>
+            <li className="text-sm font-bold text-white cursor-pointer">
+                Profile
+            </li>
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="flex h-96 bg-sky-900 py-8 px-32">
+        <div className="flex w-full h-full flex-col space-y-7">
+            <p className="text-5xl text-white">Persembahan Istimewa! Bersama kami</p>
+            <p className="text-sm text-white text-ellipsis">Dapatkan diskon luar biasa hingga 20% untuk produk pilihan kami. Tingkatkan gaya hidupmu dengan
+            koleksi terbaru dan hemat lebih banyak! Segera kunjungi toko kami sebelum minggu ini berakhir. Jangan lewatkan
+            kesempatan emas ini untuk berbelanja cerdas!</p>
+        </div>
+        <div className="w-full h-full justify-center hidden lg:flex">
+            <img className="h-96" src="./image-1.png" alt="img"/>
+        </div>
+    </div>
+    
     </>
+
   )
 }
 
